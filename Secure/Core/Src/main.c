@@ -104,7 +104,8 @@ int main(void)
   MX_ICACHE_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  printf("Hello, World!\r\n");
+  printf("testing logging\r\n");
   /* USER CODE END 2 */
 
   /*************** Setup and jump to non-secure *******************************/
@@ -385,6 +386,12 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+//redirects printf output to USART1 for displaying logs in a serial console
+int _write(int file, char *ptr, int len)
+{
+  HAL_UART_Transmit(&huart1, (uint8_t *)ptr, len, HAL_MAX_DELAY);
+  return len;
+}
 
 /* USER CODE END 4 */
 

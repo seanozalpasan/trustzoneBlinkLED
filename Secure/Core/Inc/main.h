@@ -39,7 +39,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -85,6 +85,13 @@ void Error_Handler(void);
 #define USART1_RX_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
+#if defined(__ARMCC_VERSION) || defined(__ICCARM__)
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#elif defined(__GNUC__)
+/* With GCC, small printf (option LD Linker->Libraries->Small printf
+   set to 'Yes') calls __io_putchar() */
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#endif
 
 /* USER CODE END Private defines */
 

@@ -1,8 +1,9 @@
 ../Core/Src/main.c:75:5:main	1
-../Core/Src/main.c:133:13:NonSecure_Init	1
-../Core/Src/main.c:153:6:SystemClock_Config	4
-../Core/Src/main.c:204:13:MX_GTZC_S_Init	5
-../Core/Src/main.c:279:13:MX_ICACHE_Init	3
-../Core/Src/main.c:311:13:MX_USART1_UART_Init	5
-../Core/Src/main.c:359:13:MX_GPIO_Init	1
-../Core/Src/main.c:395:6:Error_Handler	1
+../Core/Src/main.c:134:13:NonSecure_Init	1
+../Core/Src/main.c:154:6:SystemClock_Config	4
+../Core/Src/main.c:205:13:MX_GTZC_S_Init	5
+../Core/Src/main.c:280:13:MX_ICACHE_Init	3
+../Core/Src/main.c:312:13:MX_USART1_UART_Init	5
+../Core/Src/main.c:360:13:MX_GPIO_Init	1
+../Core/Src/main.c:390:5:_write	1
+../Core/Src/main.c:402:6:Error_Handler	1
